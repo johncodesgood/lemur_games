@@ -63,31 +63,15 @@ function checkUpdate(){
 }
 
 function updateBoard(data) {
-  for (i=0; i<3; i++) {
-    var string = 'div.ttt-right table tbody tr.tr1 #' + i
+  for (i=0; i<9; i++) {
+    var string = '#board' + i
     $(string).text(data.game_state[i]) 
-  }
-  for (j=3; j<6; j++) {
-    var string = 'div.ttt-right table tbody tr.tr2 #' + j
-    $(string).text(data.game_state[j]) 
-  }
-  for (k=6; k<9; k++) {
-    var string = 'div.ttt-right table tbody tr.tr3 #' + k
-    $(string).text(data.game_state[k]) 
   }
 }
 
 function resetBoard() {
-  for (i=0; i<3; i++) {
-    var string = 'div.ttt-right table tbody tr.tr1 #' + i
-    $(string).text("_") 
-  }
-  for (j=3; j<6; j++) {
-    var string = 'div.ttt-right table tbody tr.tr2 #' + j
-    $(string).text("_") 
-  }
-  for (k=6; k<9; k++) {
-    var string = 'div.ttt-right table tbody tr.tr3 #' + k
+  for (i=0; i<9; i++) {
+    var string = '#board' + i
     $(string).text("_") 
   }
 }
@@ -106,7 +90,7 @@ $(function(){
       	$(this).text("O");
       }
       var moveType = $(this).text();
-      var location = $(this).attr("id");
+      var location = $(this).attr("id").slice(-1);
       $.ajax({
        method: 'GET',
        url: '/tictactoe/move',
@@ -126,7 +110,6 @@ $(function(){
 
 function checkForEnd(result){
   if (result !== "") {
-    // $("#my_turn").text("Game Over!");
     if (result === "X") { 
       $("#my_turn").text("X WINS!");
     }
@@ -136,8 +119,8 @@ function checkForEnd(result){
     else if (result === "draw") {
       $("#my_turn").text("IT'S A DRAW");
     }
+    resetBoard();
     setTimeout( function() { 
-      resetBoard();
       $("#new_game").show(); 
       $("#my_turn").text("");
       }, 2000);
@@ -157,6 +140,7 @@ function checkGameOver(gameState){
     else if (gameState.x_or_o === 2) {
       $("#my_turn").text("IT'S A DRAW"); 
     }
+    resetBoard();
     $.ajax({
       method: 'GET',
       url: '/tictactoe/delete',
@@ -164,8 +148,8 @@ function checkGameOver(gameState){
       data: {id: gameState.id}, 
       success: console.log("game deleted"),
     });
+
     setTimeout( function() { 
-      resetBoard();
       $("#new_game").show();
       $("#my_turn").text(""); 
     }, 2000);
