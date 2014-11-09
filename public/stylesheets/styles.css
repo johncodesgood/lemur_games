@@ -1,0 +1,273 @@
+
+/************************/
+/* Basics & Navigation  */
+/************************/
+
+body {
+	background: url("/images/background2.png");
+	background-repeat: no-repeat;
+	font-family: 'Luckiest Guy';
+	color: white;
+}
+
+h1 { font-size: 4em; }
+h2 { font-size: 3em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1em; }
+
+ul { list-style-type: none; }
+
+
+.container {
+	margin: 0px 40px 40px 40px;
+	text-align: center;
+	height: 100%;
+}
+
+.navigation {
+	margin: 20px 20px 0px 20px;
+}
+
+
+div.navigation a, 
+div.navigation a:link, 
+div.navigation a:visited, 
+div.navigation a:active 
+{
+	font-size: 1.6em;
+	margin-right: 1em;
+	text-decoration: none;
+	color: white;
+}
+
+div.navigation a:hover {
+	font-size: 1.6em;
+	margin-right: 1em;
+	text-decoration: none;
+	color: lightblue;
+}
+
+.lemlem{
+  position: absolute;
+  width: 10em;
+}
+
+
+/************************/
+/*    Signup/Login      */
+/************************/
+
+form {
+	text-align: center;
+	font-color: #D8D8D8;
+}
+
+input    {
+width:300px;
+display:block;
+border: 1px solid #999;
+height: 40px;
+font-size: 1em;
+font-color: #D8D8D8;
+/*margin-bottom: 10px;*/
+margin: auto;
+-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 0px 8px rgba(s0, 0, 0, 0.3);
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+button {
+width:140px;
+/*background:#09C;*/
+/*background: #BDBDBD;*/
+background: lightblue;
+color: white;
+/*text-shadow: 2px 2px 0px */
+/*font-family: 'Luckiest Guy';*/
+height:40px;
+font-size: 1em;
+font-weight: bold;
+/*border: 1p solid #999;*/
+display: table-cell;
+vertical-align: middle;
+}
+
+button:hover {
+background:#fff;
+/*color:#09C;*/
+color: #BDBDBD;
+}
+
+
+/************************/
+/*    Welcome Page      */
+/************************/
+
+div.game-select a, 
+div.game-select a:link, 
+div.game-select a:hover, 
+div.game-select a:visited, 
+div.game-select a:active 
+{
+	font-size: 3em;
+	text-decoration: none;
+	color: lightblue;
+}
+
+div.game-select a:hover {
+	font-size: 3em;
+	text-decoration: none;
+	color: white;
+}
+
+div.welcome a, 
+div.welcome a:link, 
+div.welcome a:visited, 
+div.welcome a:active 
+{
+	font-size: 1em;
+	text-decoration: none;
+	color: white;
+}
+
+div.welcome a:hover {
+	font-size: 1em;
+	text-decoration: none;
+	color: lightblue;
+}
+
+
+/************************/
+/*      Hangman         */
+/************************/
+
+.left {
+	width: 300px;
+	height: 200px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.middle {
+	width: 300px;
+	height: 200px;
+	margin-top: 40px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.right {
+	width: 300px;
+	height: 200px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+div.left p.hangman-letters a,
+div.left p.hangman-letters a:link,
+div.left p.hangman-letters a:visited,
+div.left p.hangman-letters a:active
+ {
+	font-size: 1.6em;
+	text-decoration: none;
+	color: lightblue;
+}
+
+
+div.left p.hangman-letters a:hover {
+	font-size: 1.6em;
+	text-decoration: none;
+	color: white;
+}
+
+div.middle a,
+div.middle a:link,
+div.middle a:visited,
+div.middle a:active
+{
+	font-size: 2em;
+	text-decoration: none;
+	color: white;
+}
+
+div.middle a:hover
+{
+	font-size: 2em;
+	text-decoration: none;
+	color: lightblue;
+}
+
+div.middle div {
+	font-size: 4em;
+}
+
+div.right p {
+	line-height: 0em;
+	font-size: 3em;
+}
+
+/************************/
+/*     Tic Tac Toe      */
+/************************/
+
+.ttt-left {
+	width: 500px;
+	vertical-align: top;
+	text-align: center;
+	display: inline-block;
+	/*margin: auto;*/
+}
+
+.ttt-right {
+	width: 400px;
+	vertical-align: top;
+	display: inline-block;
+	margin: auto;
+}
+
+
+table {
+    /*border: 1px solid white;*/
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 300px;
+    height: 240px;
+    display: block;
+    margin: auto;
+}
+
+th, td {
+    border: 1px solid white;
+    overflow: hidden;
+    width: 100px;
+    height: 80px;
+    font-size: 3em;
+}
+
+#new_game {
+	margin-top: 100px;
+	font-size: 2em;
+	color: white;
+}
+
+#new_game a,
+#new_game a:link,
+#new_game a:visited,
+#new_game a:active
+{
+	text-decoration: none;
+	color: white;
+}
+
+#new_game a:hover
+{
+	text-decoration: none;
+	color: lightblue;
+}
+
+#my_turn {
+	margin-top: 20px;
+	font-size: 2em;
+	color: white;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Games!</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Luckiest+Guy&effect=shadow-multiple|emboss|3d-float|outline' rel='stylesheet' type='text/css'>
+  <script src='/javascripts/jquery.js'></script>
+  <script src='/javascripts/scripts.js'></script>
+</head>
+<body class="font-effect-outline">
+	 <% if current_user %>
+      <%= erb :"partials/_user_navigation" %>
+    <% else %>
+      <%= erb :"partials/_non_user_navigation" %>
+    <% end %>
+  <div class="container">	 
+	 <%= yield %>
+  </div>
+</body>
+</html>

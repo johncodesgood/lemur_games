@@ -1,0 +1,38 @@
+<script src='/javascripts/scripts_hangman.js'>newGame();</script>
+<H1 style="margin-bottom: 0px">Hangman</H1>
+
+<div class="left">
+	<br>
+	<h3>Guess a letter!</h3>
+	<p class="hangman-letters"><% ("a".."m").each do |letter| %>
+		<a href="#" value="<%= letter %>" id="<%= letter %>"><%= letter %></a>
+	<% end %></p>
+	<p class="hangman-letters"><% ("n".."u").each do |letter| %>
+		<a href="#" value="<%= letter %>" id="<%= letter %>"><%= letter %></a>
+	<% end %></p>
+	<p class="hangman-letters"><% ("v".."z").each do |letter| %>
+		<a href="#" value="<%= letter %>" id="<%= letter %>"><%= letter %></a>
+	<% end %></p>
+</div>
+
+<div class="middle">
+	<br>
+	<br>
+	<div id="word"></div>
+	<br>
+	<br>
+	<a id="newgame" href="#">New Game</a>
+</div>
+
+<div class="right">
+	<!-- <textarea id="picture" rows="7" cols="16"></textarea> -->
+
+	<p id="picture"></p>
+	<p id="picture1"></p>
+	<p id="picture2"></p>
+	<p id="picture3"></p>
+	<p id="picture4"></p>
+</div>
+
+
+

@@ -1,0 +1,11 @@
+source 'http://rubygems.org'
+
+gem 'sinatra'
+gem 'sinatra-activerecord'
+gem 'sinatra-reloader'
+gem 'pry'
+gem 'pg'
+gem 'thin'
+gem 'bcrypt'
+gem 'rake'
+gem 'json'
