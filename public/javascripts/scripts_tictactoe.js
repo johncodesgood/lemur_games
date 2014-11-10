@@ -123,6 +123,7 @@ function checkForEnd(result){
     setTimeout( function() { 
       $("#new_game").show(); 
       $("#my_turn").text("");
+      location.reload();
       }, 2000);
   } 
 }
@@ -151,7 +152,8 @@ function checkGameOver(gameState){
 
     setTimeout( function() { 
       $("#new_game").show();
-      $("#my_turn").text(""); 
+      $("#my_turn").text("");
+      location.reload();
     }, 2000);
 
   }

@@ -32,6 +32,7 @@ class TicTacToeController < ApplicationController
     check_update.to_json  
    end 
 
+
   get '/move' do
     x_or_o = params[:x_or_o]
     position = params[:position].to_i

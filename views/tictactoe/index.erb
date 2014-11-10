@@ -1,3 +1,4 @@
+
 <script src='/javascripts/scripts_tictactoe.js'>newGame();</script>
 
 <H1>Tic Tac Toe</H1>
@@ -5,7 +6,7 @@
 <div class="ttt-left">
 	<ul id="new_game" style="margin-top: 40px;">Start a New Game with:
   	<% @users.each do |user| %>
-    	<% if user.id != current_user.id %>
+    	<% if (user.id != current_user.id) && !(Tictactoe.find_by(player1_ID: user.id)) && !(Tictactoe.find_by(player2_ID: user.id)) %>
       	<li><a href="" class="startnewgame" id="<%= user.id %>"><%= user.username %></a></li>
     	<% end %>
   	<% end %>
